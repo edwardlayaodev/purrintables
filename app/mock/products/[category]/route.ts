@@ -1,19 +1,11 @@
 import Keychains from "./../../../_assets/products/keychains.png";
 import { NextRequest, NextResponse } from "next/server";
+import { Product } from "@/app/_types/product";
 
 export async function GET(
   req: NextRequest,
   { params }: any
 ): Promise<NextResponse> {
-  interface Product {
-    id: string;
-    thumbnail: any;
-    title: string;
-    price: number;
-    isSoldOut: boolean;
-    link: string;
-  }
-
   const { category } = params;
 
   // get length from searchParams defaults to 5
