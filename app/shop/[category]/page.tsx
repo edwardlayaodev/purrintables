@@ -71,7 +71,7 @@ export default async function ProductCategoryPage({ params }: any) {
         <h2 className="text-2xl font-bold">{categoryItem.title}</h2>
         <p className="mt-6">{categoryItem.desc}</p>
       </header>
-      <article className="border-4 border-solid border-[#f8efe6] my-6">
+      <article className="my-6">
         <Organism.Shop>
           {productsArray.length &&
             productsArray.map((product: Product) => {
