@@ -21,18 +21,18 @@ const Navigation: React.FC<NavigationProps> = ({ type }) => {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
 
   const shopItems: MenuProps["items"] = [
-    "Shop All",
-    "Prints",
-    "Books",
-    "Stickers",
-    "Keychains",
-    "Standee",
-    "Tumbler / Mugs",
-    "Tshirts / Hoodies",
-    "Paocat Merch",
-  ].map((label, index) => ({
+    { label: "Shop All", slug: "all" },
+    { label: "Prints", slug: "prints" },
+    { label: "Books", slug: "books" },
+    { label: "Stickers", slug: "stickers" },
+    { label: "Keychains", slug: "keychains" },
+    { label: "Standee", slug: "standee" },
+    { label: "Tumbler / Mugs", slug: "tumbler_mugs" },
+    { label: "Tshirts / Hoodies", slug: "tshirts_hoodies" },
+    { label: "Paocat Merch", slug: "paocat" },
+  ].map((item, index) => ({
     key: index + 1,
-    label,
+    label: <a href={`/shop/${item.slug}`}>{item.label}</a>,
   }));
 
   const infoItems: MenuProps["items"] = [
