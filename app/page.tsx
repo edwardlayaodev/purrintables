@@ -85,28 +85,28 @@ export default function Home() {
           title="Keychains"
           price={200}
           isSoldOut={false}
-          link="#"
+          link="/shop/keychains"
         />
         <Molecule.Product
           thumbnail={Sticker}
           title="Sticker Set"
           price={150}
           isSoldOut={false}
-          link="#"
+          link="/shop/stickers"
         />
         <Molecule.Product
           thumbnail={Tshirts}
           title="T-shirts"
           price={600}
           isSoldOut={false}
-          link="#"
+          link="/shop/tshirts_hoodies"
         />
         <Molecule.Product
           thumbnail={Tumbler}
           title="Tumbler"
           price={400}
           isSoldOut={false}
-          link="#"
+          link="/shop/tumbler_mugs"
         />
       </Organism.Shop>
     </main>
