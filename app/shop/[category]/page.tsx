@@ -62,7 +62,7 @@ export default async function ProductCategoryPage({ params }: any) {
               title: <a href="/shop">Shop</a>,
             },
             {
-              title: <a href="/category">{categoryItem.title}</a>,
+              title: <a href={`/shop/${category}`}>{categoryItem.title}</a>,
             },
           ]}
         />
