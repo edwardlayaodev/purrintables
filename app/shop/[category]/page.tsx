@@ -3,10 +3,7 @@ import Organism from "@/app/_components/organisms";
 import { Breadcrumb } from "antd";
 import { notFound } from "next/navigation";
 import { Product } from "@/app/_types/product";
-<<<<<<< HEAD
 import Atom from "@/app/_components/atoms";
-=======
->>>>>>> 60ef0e0555e6d2065060cffccc82d4600883bf1e
 
 export default async function ProductCategoryPage({ params }: any) {
   interface CategoryType {
