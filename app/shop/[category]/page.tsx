@@ -3,6 +3,7 @@ import Organism from "@/app/_components/organisms";
 import { Breadcrumb } from "antd";
 import { notFound } from "next/navigation";
 import { Product } from "@/app/_types/product";
+import Atom from "@/app/_components/atoms";
 
 export default async function ProductCategoryPage({ params }: any) {
   interface CategoryType {
@@ -50,22 +51,25 @@ export default async function ProductCategoryPage({ params }: any) {
 
   const productsArray: Product[] = await fetchProducts(category, 6);
 
+  const breadcrumbArray = [
+    {
+      label: "Home",
+      link: "/",
+    },
+    {
+      label: "Shop",
+      link: "/shop",
+    },
+    {
+      label: categoryItem.title,
+      link: `/shop/${category}`,
+    },
+  ];
+
   return (
     <main className="py-6 py-12 max-w-[1366px] mx-auto">
       <article>
-        <Breadcrumb
-          items={[
-            {
-              title: <a href="/">Home</a>,
-            },
-            {
-              title: <a href="/shop">Shop</a>,
-            },
-            {
-              title: <a href={`/shop/${category}`}>{categoryItem.title}</a>,
-            },
-          ]}
-        />
+        <Atom.Breadcrumb BreadcrumbItems={breadcrumbArray} />
       </article>
       <header className="mt-6">
         <h2 className="text-2xl font-bold">{categoryItem.title}</h2>
