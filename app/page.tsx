@@ -12,8 +12,7 @@ import { Modal } from "antd";
 
 export default function Home() {
   const [isModalOpen] = useState(
-    typeof window !== "undefined" &&
-      window.location.href !== "http://localhost:3000/"
+    typeof window !== "undefined" && window.location.href !== "http://localhost:3000/"
   );
 
   const handleOk = () => {
@@ -36,11 +35,11 @@ export default function Home() {
         <div className="flex items-center flex-col gap-5">
           <Image src={UnderConstruction} width={200} alt="Under Maintenance" />
           <div className="text-2xl font-light text-center">
-            Purrintables is under construction. Some links might be broken. In
-            the mean time you can message us over at
+            Purrintables is under construction. Some links might be broken. In the mean time you can
+            message us over at
             <a href="https://www.instagram.com/purrintables" target="_blank">
               Instagram
-            </a>{" "}
+            </a>
             or
             <a href="https://www.facebook.com/purrintables" target="_blank">
               Facebook
@@ -62,17 +61,16 @@ export default function Home() {
       <Organism.Jumbotron title="Welcome to Purrintables!">
         <div className="space-y-3">
           <p className="leading-10">
-            Purrintables is a small business based in the Philippines. Here you
-            can support all sorts of our products ranging from
+            Purrintables is a small business based in the Philippines. Here you can support all
+            sorts of our products ranging from
             <span className="font-bold text-[#df56c0]"> prints</span> and
             <span className="font-bold text-[#df56c0]"> stickers</span> to
             <span className="font-bold text-[#df56c0]"> T-shirts</span> and
             <span className="font-bold text-[#df56c0]"> Merch sets</span>.
           </p>
           <p className="leading-10">
-            Please read our{" "}
-            <span className="font-bold text-[#df56c0]">FAQ</span> pages before
-            making a purchase!
+            Please read our
+            <span className="font-bold text-[#df56c0]"> FAQ</span> pages before making a purchase!
           </p>
         </div>
       </Organism.Jumbotron>

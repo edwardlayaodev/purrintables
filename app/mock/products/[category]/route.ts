@@ -2,10 +2,7 @@ import Keychains from "./../../../_assets/products/keychains.png";
 import { NextRequest, NextResponse } from "next/server";
 import { Product } from "@/app/_types/product";
 
-export async function GET(
-  req: NextRequest,
-  { params }: any
-): Promise<NextResponse> {
+export async function GET(req: NextRequest, { params }: any): Promise<NextResponse> {
   const { category } = params;
 
   // get length from searchParams defaults to 5
@@ -25,9 +22,6 @@ export async function GET(
 
     return NextResponse.json({ products }, { status: 200 });
   } catch (error) {
-    return NextResponse.json(
-      { error: "Something went wrong", message: error },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: "Something went wrong", message: error }, { status: 400 });
   }
 }

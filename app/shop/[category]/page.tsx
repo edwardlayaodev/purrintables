@@ -31,9 +31,7 @@ export default async function ProductCategoryPage({ params }: any) {
 
   async function fetchProducts(category: string, length: number) {
     try {
-      const res = await fetch(
-        `http:/localhost:3000/mock/products/${category}?length=${length}`
-      );
+      const res = await fetch(`http:/localhost:3000/mock/products/${category}?length=${length}`);
       const data = await res.json();
 
       return data.products || [];

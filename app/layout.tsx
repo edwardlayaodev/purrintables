@@ -2,7 +2,6 @@ import "./_styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Organism from "@organism";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,11 +10,7 @@ export const metadata: Metadata = {
   description: "This is the website of Purrintables",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <Organism.Wrapper>
